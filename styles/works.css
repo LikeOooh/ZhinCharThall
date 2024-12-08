@@ -1,0 +1,126 @@
+.works {
+    font-size: 4rem;
+    line-height: 4.5rem;
+    color: #535252;
+    text-transform: uppercase;
+}
+
+.content {
+    align-content: flex-start;
+}
+
+.any_works {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 120px));
+    grid-template-rows: repeat(3, minmax(100px, 120px));
+    grid-auto-rows: minmax(100px, 120px);
+    grid-area: "row-1-col-1 row-1-col-2 row-1-col-3 row-1-col-4"
+               "row-2-col-1 row-2-col-2 row-2-col-3 row-2-col-4"
+               "row-3-col-1 row-3-col-2 row-3-col-3 row-3-col-4"
+               "row-4-col-1 row-4-col-2 row-4-col-3 row-4-col-4";
+    gap: 10px;
+}
+
+.any_works img {
+    min-height: 100px;
+    max-height: 120px;
+    width: auto;
+}
+
+.big {
+    display: none;
+}
+
+.any_works div:hover .big {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    min-height: 30em;
+    max-height: 30em;
+}
+
+.image img {
+    visibility: hidden;
+}
+
+@media (max-width: 1440px) {
+    .any_works {
+        grid-template-columns: repeat(4, minmax(90px, 100px));
+        grid-template-rows: repeat(3, minmax(90px, 100px));
+        grid-auto-rows: minmax(90px, 100px);
+    }
+    
+    .any_works img {
+        min-height: 90px;
+        max-height: 100px;
+        width: auto;
+    }
+    .any_works div:hover .big {
+        top: 25%;
+        min-height: 35em;
+        max-height: 35em;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .any_works {
+        grid-template-columns: repeat(4, minmax(80px, 100px));
+        grid-template-rows: repeat(3, minmax(80px, 100px));
+        grid-auto-rows: minmax(80px, 100px);
+    }
+    
+    .any_works img {
+        min-height: 80px;
+        max-height: 100px;
+        width: auto;
+    }
+    .any_works div:hover .big {
+        left: 55%;
+        min-height: 40em;
+        max-height: 40em;
+    }
+}
+
+@media (max-width: 720px) {
+    .any_works {
+        grid-template-columns: repeat(4, minmax(80px, 100px));
+        grid-template-rows: repeat(3, minmax(80px, 100px));
+        grid-auto-rows: minmax(80px, 100px);
+    }
+    
+    .any_works img {
+        min-height: 80px;
+        max-height: 100px;
+        width: auto;
+    }
+    .any_works div:hover .big {
+        top: 50%;
+        left: 22%;
+        min-height: 40em;
+        max-height: 40em;
+    }
+
+}
+
+@media (max-width: 375px) {
+    
+    .any_works {
+        grid-template-columns: repeat(4, minmax(60px, 80px));
+        grid-template-rows: repeat(3, minmax(60px, 80px));
+        grid-auto-rows: minmax(60px, 80px);
+    }
+    
+    .any_works img {
+        min-height: 60px;
+        max-height: 80px;
+        width: auto;
+    }
+    .any_works div:hover .big {
+        top: 55%;
+        left: 15%;
+        min-height: 30em;
+        max-height: 30em;
+    }
+}
